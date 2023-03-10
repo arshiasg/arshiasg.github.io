@@ -1,0 +1,41 @@
+body {
+    /* background-color: black; */
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    text-align: center;
+    margin-top: 20%;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: 20%;
+}
+
+.Text h1 {
+    color: rgb(196, 255, 137);
+}
+
+.Text {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.07);
+    top: 25%;
+    bottom: 25%;
+    right: 10%;
+    left: 10%;
+}
+
+input {
+    position: relative;
+    top: 3%;
+    right: 32%;
+    font-size: 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    border-style: hidden;
+
+}
+
+.Text p {
+    padding: 2%;
+    text-align: left;
+}
