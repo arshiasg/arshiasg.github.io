@@ -1,5 +1,4 @@
-### Hi there 👋
-
+- we think we're different from people before our century but we are the same. they just didn't have access to the internet and the free world. 
 <!--
 **arshiasg/arshiasg** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
