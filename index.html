@@ -1,23 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <title> Arshia's House </title>
+    <style>
+        .terminal {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            height: 400px;
+            width: 600px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .terminal-header {
+            background-color: gray;
+            padding: 5px;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .terminal-body {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .terminal-output {
+            flex-grow: 1;
+            overflow: auto;
+            padding: 10px;
+        }
+
+        .terminal-input {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: gray;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .terminal-input span {
+            color: white;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .terminal-input input {
+            background-color: gray;
+            color: white;
+            border: none;
+            font-size: 20px;
+            width: 100%;
+            outline: none;
+        }
+    </style>
+    <script>
+        const terminalInput = document.getElementById("terminal-input");
+
+        terminalInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                const command = event.target.value.trim();
+                if (command === "clear") {
+                    clearOutput();
+                } else {
+                    addOutput(handleCommand(command))
+                }
+                event.target.value = "";
+                // outputEl.innerHTML += `\n${command}\n${output}\n`;
+            }
+        });
+
+        function handleCommand(input) {
+            let output = "";
+            output = "";
+            switch (input) {
+                case "help":
+                    output = "List of commands: help, about, clear";
+                    break;
+                case "about":
+                    output = "This is a sample terminal emulator";
+                    break;
+                default:
+                    output = `"Unknown command: ${input}`;
+            }
+            return output;
+        }
+
+        function addOutput(output) {
+            const terminalOutput = document.querySelector(".output");
+            const p = document.createElement("p");
+            p.textContent = output;
+            terminalOutput.appendChild(p);
+        }
+
+        function clearOutput() {
+            const terminalOutput = document.querySelector(".output");
+            terminalOutput.innerHTML = "";
+        }
+    </script>
 </head>
 
 <body>
-<!--     <p>HI There</p> -->
-    <div class="Text">
-        <!-- <h1>Arshia Web</h1> -->
-        <input type="text" id="input_text" placeholder="type a command...">
-        <!-- <p>fsadfasdfsadfasdfsadfecwlkrcwkrlc c;wjrnc;w tcrwe iorwne;octnwe ;
-            wcljtrnw rwn;oeirt jweoticnw frnwejlkfow frowe cewfrom
-            wfronw
-            w frw
-            frwjfonreowf
-            fweoirnfwen fnwoerfoiwmneriomowmeoimf ofe fuierwjfwoi fwoienf fioqrjf
-            efiwun fewfo ji inf fn wofowei
-        </p> -->
+    <div class="terminal">
+        <div class="terminal-header">
+            Terminal
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-output">
+                <p>Welcome to the terminal!</p>
+                <p>Type 'help' for a list of available commands.</p>
+            </div>
+            <div class="terminal-input">
+                <span>$</span>
+                <input type="text" id="terminalInput">
+            </div>
+        </div>
     </div>
 </body>
 
