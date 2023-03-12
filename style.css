@@ -1,41 +1,58 @@
 body {
-    /* background-color: black; */
     font-size: 16px;
-    font-weight: bold;
+    background-color: black;
     color: white;
-    background: black;
     text-align: center;
-    margin-top: 20%;
-    margin-right: 4%;
-    margin-left: 4%;
-    margin-bottom: 20%;
+    font-family: monospace;
 }
 
-.Text h1 {
-    color: rgb(196, 255, 137);
-}
-
-.Text {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.07);
-    top: 25%;
-    bottom: 25%;
-    right: 10%;
-    left: 10%;
-}
-
-input {
-    position: relative;
-    top: 3%;
-    right: 32%;
-    font-size: 16px;
-    color: white;
-    background: rgba(255, 255, 255, 0);
-    border-style: hidden;
-
-}
-
-.Text p {
-    padding: 2%;
+.terminal {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    max-width: 800px;
+    width: 90%;
     text-align: left;
+}
+
+.help {
+    color: greenyellow;
+    display: inline-block;
+    margin: null;
+    padding: null;
+    width: 100%;
+}
+
+.terminal p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+
+}
+
+.terminal .prompt {
+    display: inline-block;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.terminal input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    width: 95%;
+}
+
+.error {
+    color: rgb(255, 101, 101);
+}
+
+input[type="button"] {
+    background-color: white;
+    outline: auto;
+    color: black;
+    border: auto;
 }
