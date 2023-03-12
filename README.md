@@ -1,4 +1,4 @@
-- we think we're different from people before our century but we are the same. they just didn't have access to the internet and the free world. 
+- we think we're different from people before our century but are the same. they didn't have access to the internet and the free world. How we use this opportunity is our difference.
 <!--
 **arshiasg/arshiasg** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
